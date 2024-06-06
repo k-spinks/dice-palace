@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gameBrowser.css">
+  <title>2.3 Board Games</title>
+</head>
+
+<body class="bg-dark text-light">
+
+  <div class="text-center" id="#top">
+    <h1>Board Game Catalog</h1>
+    <p>Click on any game to learn more!</p>
+    <p>Want to add a game? <a href="#newGameForm"><span class="addNewGame" style="color: aqua">Click here</span></a>
+    </p>
+    <hr>
+  </div>
+
+  <div class="row d-flex justify-content-center" id="gameGallery">
+    <!--? Games go here-->
+  </div>
+
+  <!--! STATUS MODAL -->
+
+  <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="statusModalCard">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="statusModalLabel">
+            <!-- ? Error Status here -->
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="statusModalBody">
+          <!-- ? Status Details here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="statusModalBtn">Ok!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--! DETAIL MODAL -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark text-center" id="detailModalLabel">
+            <!-- ? Game Title here -->
+          </h1>
+          <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="detailModalBody">
+          <!-- ? Game Details here -->
+
+        </div>
+        <div class="modal-footer m-auto">
+          <button type="button" class="btn btn-secondary bg-primary" data-bs-dismiss="modal">Interesting!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form for a new game -->
+  <div class="container text-center w-25 mb-2" id="newGameForm">
+    <a href="#top">
+      <h6>Return to the top</h6>
+    </a>
+    <form>
+      <h2 class="">Add a New Game</h2>
+      <p><span class="requiredField">*</span> Are required</p>
+
+      <div class="form-group col-md-6">
+        <label for="gameId">ID Number<span class="requiredField"> *</span></label>
+        <input type="text" id="gameId" name="gameId" class="form-control-sm">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="gameTitle">Title<span class="requiredField"> *</span></label>
+        <input type="text" id="gameTitle" name="gameTitle" class="form-control-sm">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="gameYear">Year<span class="requiredField"> *</span></label>
+        <input type="text" id="gameYear" name="gameYear" class="form-control-sm">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="gameDescription">Description<span class="requiredField"> *</span></label>
+        <input type="textarea" id="gameDescription" name="gameDescription" class="form-control-sm">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="gamePublisher">Publisher<span class="requiredField"> * </span></label>
+        <input type="text" id="gamePublisher" name="gamePublisher" class="form-control-sm">
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="gameRating">Rating <span class="requiredField"> *</span></label>
+        <input type="text" id="gameRating" name="gameRating" class="form-control-sm mb-3">
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="addGame">Add Game</button>
+    </form>
+  </div>
+</body>
+<!-- Our custom javascript -->
+<script src="./gameBrowser.js"></script>
+</body>
+
+</html>
